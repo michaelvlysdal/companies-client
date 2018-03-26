@@ -1,8 +1,17 @@
-<mat-table [dataSource]="companiesList">
+<mat-table *ngIf="!loading; else loadingspinner" [dataSource]="companiesList">
   <ng-container matColumnDef="companyName">
-    <mat-header-cell *matHeaderCellDef> Name </mat-header-cell>
+    <mat-header-cell *matHeaderCellDef>Name</mat-header-cell>
     <mat-cell *matCellDef="let company"><a mat-button color="primary" (click)="openDetails(company.id)">{{company.name}}</a></mat-cell>
   </ng-container>
   <mat-header-row *matHeaderRowDef="columnsToDisplay"></mat-header-row>
   <mat-row *matRowDef="let myRowData; columns: columnsToDisplay"></mat-row>
 </mat-table>
+<div *ngIf="!loading && companiesList.length === 0" class="empty-list-help">
+  <div>Woops, there's no companies yet, go ahead and create one :)</div>
+  <button mat-raised-button color="primary" routerLink="/create">Create company</button>
+</div>
+<ng-template #loadingspinner>
+  <div class="spinner-wrapper">
+    <mat-spinner [diameter]="50" style="margin:0 auto;"></mat-spinner>
+  </div>
+</ng-template>

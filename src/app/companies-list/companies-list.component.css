@@ -1,0 +1,12 @@
+.spinner-wrapper {
+    padding-top: 100px;
+}
+
+.empty-list-help {
+    text-align: center;
+    line-height: 50px;
+}
+
+.mat-button {
+    min-width: 20px;
+}

@@ -28,3 +28,13 @@
 .details td:first-child {
     padding-right: 30px;
 }
+
+.address {
+    white-space: pre-wrap;
+    vertical-align: top;
+}
+
+.address-container {
+    padding-top: 5px;
+    line-height: 20px;
+}

@@ -1,4 +1,11 @@
 <div class="its-just-a-small-app">
-    <h1>Companies App</h1>
+    <div class="top-area">
+        <div class="header-wrapper">
+            <h1>{{title}}</h1>
+        </div>
+        <div class="navigation-wrapper">
+            <button *ngIf="router.url === '/list'" mat-raised-button color="primary" routerLink="/create">Create company</button>
+        </div>
+    </div>
     <router-outlet></router-outlet>
 </div>

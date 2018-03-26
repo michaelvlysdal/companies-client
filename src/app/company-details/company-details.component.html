@@ -5,8 +5,8 @@
       <tr>
         <td>CVR:</td><td>{{companyDetails?.cvr}}</td>
       </tr>
-      <tr>
-        <td>Address:</td><td>{{companyDetails?.address}}</td>
+      <tr class="address">
+        <td>Address:</td><td><div class="address-container">{{companyDetails?.address}}</div></td>
       </tr>
       <tr>
         <td>City:</td><td>{{companyDetails?.city}}</td>
@@ -26,6 +26,6 @@
 
 <ng-template #loadingspinner>
   <div class="spinner-wrapper">
-    <mat-spinner style="margin:0 auto;"></mat-spinner>
+    <mat-spinner [diameter]="70" style="margin:0 auto;"></mat-spinner>
   </div>
 </ng-template>

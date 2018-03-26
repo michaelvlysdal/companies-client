@@ -17,4 +17,7 @@ export class CompaniesService {
     return this.http.get<CompanyItem>(`${environment.companiesApi}/${id}`);
   }
 
+  saveCompany(company: CompanyItem) {
+    return this.http.post(environment.companiesApi, company);
+  }
 }

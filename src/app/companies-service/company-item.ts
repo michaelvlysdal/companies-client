@@ -1,5 +1,12 @@
 export class CompanyItem {
-    constructor(id: String, name: String, cvr: String, address: String, city: String, country: String, phone: String) {
+    constructor(
+        id: String = undefined,
+        name: String = undefined,
+        cvr: String = undefined,
+        address: String = undefined,
+        city: String = undefined,
+        country: String = undefined,
+        phone: String = undefined) {
       this.id = id;
       this.name = name;
       this.cvr = cvr;

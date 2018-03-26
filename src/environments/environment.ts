@@ -5,7 +5,5 @@
 
 export const environment = {
   production: false,
-  //companiesApi: 'http://localhost:4567/api/v1/companies'
-  companiesApi: 'https://evening-inlet-90999.herokuapp.com/api/v1/companies'
-  
+  companiesApi: 'http://localhost:4567/api/v1/companies' 
 };

@@ -14,7 +14,6 @@ export class CompanyDetailsComponent implements OnInit {
   constructor(@Inject(MAT_DIALOG_DATA) public input: any, private companiesService: CompaniesService, public dialogRef: MatDialogRef<CompanyDetailsComponent>) { }
 
   ngOnInit() {
-    console.log(`got: `, this.input);
     this.companiesService.getCompanyDetails(this.input.id)
       .subscribe(c => {
         this.companyDetails = c

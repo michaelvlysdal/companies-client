@@ -8,3 +8,17 @@
         width: 100%
     }
 }
+
+.top-area {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.header-wrapper {
+    flex-grow: 1;
+}
+
+.navigation-wrapper {
+    margin-top: auto;
+}

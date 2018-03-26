@@ -1,0 +1,14 @@
+.full-width-input {
+    width: 100%;
+}
+
+.bottom-navigation {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+}
+
+.bottom-navigation div {
+    padding: 20px;
+}

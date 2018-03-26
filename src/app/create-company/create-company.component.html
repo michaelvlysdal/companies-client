@@ -1,0 +1,29 @@
+<form (ngSubmit)="createSubmit()" #companyForm="ngForm">
+  <mat-form-field class="full-width-input">
+    <input [(ngModel)]="company.name" #nameinput matInput autofocus required name="name" placeholder="Company name">
+  </mat-form-field>
+  <mat-form-field class="full-width-input">
+    <input [(ngModel)]="company.cvr" type="number" matInput name="cvr" placeholder="CVR">
+  </mat-form-field>
+  <mat-form-field class="full-width-input">
+    <textarea [(ngModel)]="company.address" matInput name="address" matTextareaAutosize matAutosizeMaxRows="5" placeholder="Address"></textarea>
+  </mat-form-field>
+  <mat-form-field class="full-width-input">
+    <input [(ngModel)]="company.city" matInput name="city" placeholder="City">
+  </mat-form-field>
+  <mat-form-field class="full-width-input">
+    <input [(ngModel)]="company.country" matInput name="country" placeholder="Country">
+  </mat-form-field>
+  <mat-form-field class="full-width-input">
+    <span matPrefix>+45 &nbsp;</span>
+    <input [(ngModel)]="company.phone" type="tel" matInput name="phone" placeholder="Phone no">
+  </mat-form-field>
+  <div class="bottom-navigation">
+    <div>
+      <button type="submit" [disabled]="!companyForm.form.valid" mat-raised-button color="primary">Save company</button>
+    </div>
+    <div>
+      <button mat-raised-button routerLink="/list">Cancel</button>
+    </div>
+  </div>
+</form>

@@ -12,12 +12,16 @@ export class CompaniesListComponent implements OnInit {
 
   companiesList: CompanyListItem[];
   columnsToDisplay = ['companyName'];
+  loading = true;
 
   constructor(private companiesService: CompaniesService, public dialog: MatDialog) { }
 
   ngOnInit() {
     this.companiesService.getCompanies()
-      .subscribe(companies => this.companiesList = companies);
+      .subscribe(companies => {
+        this.companiesList = companies;
+        this.loading = false;
+      });
   }
 
   openDetails(id: String) {
