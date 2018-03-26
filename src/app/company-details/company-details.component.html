@@ -1,0 +1,31 @@
+<div class="content-wrapper">
+  <div *ngIf="!loading; else loadingspinner">
+    <h2 class="name">{{companyDetails?.name}}</h2>
+    <table class="details">
+      <tr>
+        <td>CVR:</td><td>{{companyDetails?.cvr}}</td>
+      </tr>
+      <tr>
+        <td>Address:</td><td>{{companyDetails?.address}}</td>
+      </tr>
+      <tr>
+        <td>City:</td><td>{{companyDetails?.city}}</td>
+      </tr>
+      <tr>
+        <td>Country:</td><td>{{companyDetails?.country}}</td>
+      </tr>
+      <tr>
+        <td>Phone:</td><td>{{companyDetails?.phone}}</td>
+      </tr>
+    </table>
+  </div>
+  <div class="bottom-wrapper">
+    <button mat-raised-button (click)="onCloseClick()">Close</button>
+  </div>
+</div>
+
+<ng-template #loadingspinner>
+  <div class="spinner-wrapper">
+    <mat-spinner style="margin:0 auto;"></mat-spinner>
+  </div>
+</ng-template>

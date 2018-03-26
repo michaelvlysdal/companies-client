@@ -6,22 +6,33 @@ import { CompaniesListComponent } from './companies-list/companies-list.componen
 import { CompaniesService } from './companies-service/companies.service';
 import { AppRoutingModule } from './/app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
-import { MatTableModule } from '@angular/material'
+import { MatTableModule, MAT_DIALOG_DEFAULT_OPTIONS, MatDialogModule, MatProgressSpinnerModule, MatButtonModule } from '@angular/material'
+import { CompanyDetailsComponent } from './company-details/company-details.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    CompaniesListComponent
+    CompaniesListComponent,
+    CompanyDetailsComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     HttpClientModule,
     AppRoutingModule,
-    MatTableModule
+    MatTableModule,
+    MatDialogModule,
+    MatProgressSpinnerModule,
+    MatButtonModule
   ],
-  providers: [CompaniesService],
+  entryComponents: [
+    CompanyDetailsComponent
+  ],
+  providers: [
+    CompaniesService,
+    { provide: MAT_DIALOG_DEFAULT_OPTIONS, useValue: {hasBackdrop: true}}
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
